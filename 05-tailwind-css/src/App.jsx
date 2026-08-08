@@ -1,13 +1,12 @@
 import React from 'react'
-import FeatureCard from './components/FeatureCard';
+import Section1 from './components/section1/Section1'
 
 const App = () => {
   return (
     <div>
-     
-      <FeatureCard />
+      <Section1 />
     </div>
-  );
+  )
 }
 
 export default App
