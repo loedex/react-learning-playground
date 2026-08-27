@@ -85,7 +85,7 @@ const EventRegisterationForm = () => {
             <h4 className="flex justify-between gap-4 border-b border-slate-200 pb-3 text-slate-600">Name : <span className="text-right font-medium text-slate-900">{formData.name}</span></h4>
             <h4 className="flex justify-between gap-4 border-b border-slate-200 pb-3 text-slate-600">Email : <span className="text-right font-medium text-slate-900">{formData.email}</span></h4>
             <h4 className="flex justify-between gap-4 border-b border-slate-200 pb-3 text-slate-600">Password : <span className="text-right font-medium text-slate-900">{formData.password}</span></h4>
-            <h4 className="border-b border-slate-200 pb-3 text-slate-600 break-all w-full max-w-full ">Bio : <span className="mt-2 block whitespace-pre-wrap break-words font-medium leading-6 text-slate-900">{formData.bio}</span></h4>
+            <h4 className="border-b border-slate-200 pb-3 text-slate-600 break-all w-full max-w-full ">Bio : <span className="mt-2 block whitespace-pre-wrap font-medium leading-6 text-slate-900">{formData.bio}</span></h4>
             <h4 className="flex justify-between gap-4 border-b border-slate-200 pb-3 text-slate-600">Country : <span className="text-right font-medium text-slate-900">{formData.country}</span></h4>
             <h4 className="flex justify-between gap-4 border-b border-slate-200 pb-3 text-slate-600">Shift : <span className="text-right font-medium text-slate-900">{formData.shift}</span></h4>
             <h4 className="flex justify-between gap-4 text-slate-600">CheckBox Checked : <span className="text-right font-semibold text-teal-700">{formData.isAgree ? "yes" : "No"}</span></h4>
