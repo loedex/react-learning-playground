@@ -9,7 +9,7 @@ const App = () => {
   useEffect(()=>{
     console.log("Searching for : ", searchText);
     
-  }, [searchText]);
+  }, [searchText, count]);
   
   return (
     <div>
