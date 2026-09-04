@@ -13,6 +13,7 @@ const LiveUserDirectory = () => {
         const fetchData = async ()=> {
             try{
                 setIsLoading(true);
+                setError(null); //clear the old error and fetch again
                 const response = await fetch('https://jsonplaceholder.typicode.com/users');
                 if(!response.ok) throw new Error("Failed to obtain user's data");
                 const data = await response.json();
