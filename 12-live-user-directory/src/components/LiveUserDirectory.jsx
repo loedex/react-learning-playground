@@ -52,7 +52,7 @@ const LiveUserDirectory = () => {
         }
     }, [error, data, isLoading]);
     if(isLoading && data.length===0){
-        return <p style={{background: 'geen', color: 'white', fontWeight:'bold'}}>loading users data .... please wait, it should take a minute</p>
+        return <p style={{background: 'green', color: 'white', fontWeight:'bold'}}>loading users data .... please wait, it should take a minute</p>
     }
     if(error){
         return <p style={{background: 'red', color: 'white', fontWeight: 'bold'}}>Error occurred : {error}</p>
