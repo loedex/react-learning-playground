@@ -61,10 +61,10 @@ const LiveUserDirectory = () => {
 // console.log(data);
 
   return (
-    <div style={{width: '100%', minHeight: '100vh', height: '100%', display: 'flex', alignItems: 'center', flexDirection: 'column', }}>
+    <div style={{width: '100%', minHeight: '100vh', height: '100%', display: 'flex', alignItems: 'center', flexDirection: 'column', padding: '10px'}}>
         <h1>Live User Directory </h1>
         <h5>Auto refreshes after 10 seconds</h5>
-     <div style={{display: 'flex', gap: '20px', flexWrap: 'wrap', width: '100%'}}>
+     <div style={{display: 'flex', gap: '20px', flexWrap: 'wrap', width: '100%', justifyContent: 'center'}}>
            {
             data.map((user)=> (
                
