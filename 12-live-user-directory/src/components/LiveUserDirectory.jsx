@@ -65,18 +65,18 @@ console.log(data);
         <h5>Auto refreshes after 10 seconds</h5>
      <div style={{display: 'flex', gap: '20px', flexWrap: 'wrap', width: '100%'}}>
            {
-            data.map((data)=> (
-               <div >
-                 <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '40px', backgroundColor: 'whitesmoke', padding: '40px',  }}>
-                    <h3>Name : {data.name}</h3>
-                    <h4>Username : {data.username}</h4>
-                    <h5>City : {data.address.city}</h5>
-                    <h6>Company : {data.company.name}</h6>
-                    <h6>Email : {data.email}</h6>
-                    <h6>Phone Number : {data.phone}</h6>
-                    <h6>Visit my website : {data.website}</h6>
+            data.map((user)=> (
+               
+                 <div key={user.id} style={{display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '40px', backgroundColor: 'whitesmoke', padding: '40px',  }}>
+                    <h3>Name : {user.name}</h3>
+                    <h4>Username : {user.username}</h4>
+                    <h5>City : {user.address.city}</h5>
+                    <h6>Company : {user.company.name}</h6>
+                    <h6>Email : {user.email}</h6>
+                    <h6>Phone Number : {user.phone}</h6>
+                    <h6>Visit my website : {user.website}</h6>
                 </div>
-               </div>
+               
             ))
         }
      </div>
