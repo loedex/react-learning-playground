@@ -57,8 +57,8 @@ const LiveUserDirectory = () => {
     if(error){
         return <p style={{background: 'red', color: 'white', fontWeight: 'bold'}}>Error occurred : {error}</p>
     }
-
-console.log(data);
+//for debugging.
+// console.log(data);
 
   return (
     <div style={{width: '100%', minHeight: '100vh', height: '100%', display: 'flex', alignItems: 'center', flexDirection: 'column', }}>
@@ -71,8 +71,8 @@ console.log(data);
                  <div key={user.id} style={{display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '40px', backgroundColor: 'whitesmoke', padding: '40px',  }}>
                     <h3>Name : {user.name}</h3>
                     <h4>Username : {user.username}</h4>
-                    <h5>City : {user.address.city}</h5>
-                    <h6>Company : {user.company.name}</h6>
+                    <h5>City : {user.address?.city}</h5>
+                    <h6>Company : {user.company?.name}</h6>
                     <h6>Email : {user.email}</h6>
                     <h6>Phone Number : {user.phone}</h6>
                     <h6>Visit my website : {user.website}</h6>
