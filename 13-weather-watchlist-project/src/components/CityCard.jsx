@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-const CityCard = ({city}) => {
+const CityCard = ({city, onRemove}) => {
     const [weather, setWeather] = useState(null)
     const [isLoading, setIsLoading] = useState(null);
     const [error, setError] = useState(null);
@@ -74,6 +74,7 @@ const CityCard = ({city}) => {
           <p>💨 Wind Speed: {weather.windspeed} km/h</p>
         </div>
       )}
+       <button onClick={() => onRemove(city.name)}>Remove</button>
     </div>
   )
 }

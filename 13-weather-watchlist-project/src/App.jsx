@@ -28,6 +28,11 @@ const App = () => {
     setSearchText('');
     setFormError('');
   }
+
+  function handleRemove(cityName) {
+    setWatchList((prev)=> prev.filter((c)=> c.name !== cityName))
+    
+  }
   return (
     <div>
       <h1>Weather WatchList</h1>
@@ -49,7 +54,7 @@ const App = () => {
         ) : (
           <div>
             {watchlist.map((city) => (
-              <CityCard key={city.name} city={city}/>
+              <CityCard key={city.name} city={city} onRemove={handleRemove}/>
             ))}
           </div>
         )
