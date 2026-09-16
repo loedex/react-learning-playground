@@ -5,8 +5,10 @@ import GpeWatchlist from "./GpeWatchlist";
 
 const GpeParent = () => {
   const [searchText, setSearchText] = useState("");
-  const [watchlist, setWatchList] = useState([
-  ]);
+  const [watchlist, setWatchList] = useState(()=>{
+    const saved = localStorage.getItem('githubwatchlistt');
+    return saved ? JSON.parse(saved) : [];
+  });
 
 
   function handleRemove(name) {
@@ -16,12 +18,6 @@ const GpeParent = () => {
     
   }
 
-  useEffect(()=>{
-    const saved = localStorage.getItem('githubwatchlistt');
-    if(saved){
-        setWatchList(JSON.parse(saved));
-    }
-  },[]);
 
   useEffect(()=>{
     localStorage.setItem('githubwatchlistt', JSON.stringify(watchlist));
