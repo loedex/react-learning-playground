@@ -27,7 +27,7 @@ const App = () => {
       <p>State Value : {value}</p>
       <button onClick={handleRefChange}>Change myRef.current</button>
       <button onClick={handleStateChange}>Change state value</button>
-      <textarea ref={textAreaRef} name="" id=""/>
+      <textarea ref={textAreaRef} name="" id="" />
       <button onClick={handleTextarea}>Clear & Focus</button>
     </div>
   );
