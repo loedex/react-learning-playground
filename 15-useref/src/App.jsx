@@ -8,6 +8,7 @@ const App = () => {
 
   function handleRefChange() {
     myRef.current++;
+    console.log(myRef);
     console.log(`Current Value : ${myRef.current}`);
   }
   function handleStateChange() {
