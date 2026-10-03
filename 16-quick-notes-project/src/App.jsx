@@ -6,6 +6,7 @@ import { useState , useEffect , useRef } from 'react'
 
 const App = () => {
   const [noteData , setNoteData] = useState([]);
+  const totalNotesCreatedRef = useRef(0);
 
   const getDataUpdate = (t, d)=>{
     const newNoteObject = {
@@ -15,20 +16,21 @@ const App = () => {
     };
 
     setNoteData((prev)=> [...prev, newNoteObject]);
+    totalNotesCreatedRef.current +=1;
   }
 
   const handleRemoveNote = (id)=>{
-    
+    setNoteData((prev)=> prev.filter((note)=> note.id !== id));
   }
   
   return (
     <div>
-      <Header />
+      <Header noteData={noteData} totalNotes={totalNotesCreatedRef.current}/>
       <NoteForm  getDataUpdate={getDataUpdate}/>
       
       {
         noteData.map((note)=>(
-          <DisplayNotes key={note.id} title={note.title} description={note.description} />
+          <DisplayNotes key={note.id} title={note.title} description={note.description} id={note.id} handleRemoveNote={handleRemoveNote}  />
         ))
       }
     </div>
