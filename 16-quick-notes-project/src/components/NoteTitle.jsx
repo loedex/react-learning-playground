@@ -1,9 +1,15 @@
 import React from "react";
+import { useRef , useEffect } from "react";
 
-const NoteTitle = ({ noteTitle, setNoteTitle }) => {
+const NoteTitle = ({ noteTitle, setNoteTitle, focusTrigger }) => {
+  const titleRef = useRef(null);
+  useEffect(()=>{
+    titleRef.current.focus();
+  },[focusTrigger])
   return (
     <div className="w-full ">
       <input
+        ref={titleRef}
         type="text"
         value={noteTitle}
         onChange={e=> setNoteTitle(e.target.value)}
@@ -12,6 +18,7 @@ const NoteTitle = ({ noteTitle, setNoteTitle }) => {
       />
     </div>
   );
+
 };
 
 export default NoteTitle;
