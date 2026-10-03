@@ -1,9 +1,11 @@
 import React from 'react'
+import { useRef , useEffect} from 'react'
 
-const ProjectTotalCount = () => {
+const ProjectTotalCount = ({totalNotes}) => {
+ 
   return (
     <div>
-        <p className='text-[15px] text-center'>Total Notes Created : <span className='text-[13px]'>12</span></p>
+        <p className='text-[15px] text-center'>Total Notes Created : <span className='underline'>{totalNotes}</span></p>
     </div>
   )
 }
